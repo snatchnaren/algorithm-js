@@ -3,8 +3,6 @@
  * easily understandable than others as far as i know :P
  * 
  * SRC: https://www.geeksforgeeks.org/length-of-the-longest-substring-without-repeating-characters/
- * UPDATED_TOUGH_VERSION: https://www.geeksforgeeks.org/length-of-the-longest-substring-with-equal-1s-and-0s/
- * VIDEO_GOOD_GUY: https://www.youtube.com/watch?v=SB-K2XlOH7I
  * 
  * @param {string} inputStr 
  */

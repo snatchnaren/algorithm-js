@@ -37,13 +37,13 @@ class MergeSort{
 			
 			/*Validating data present for swapping else adding at last*/
 			if(leftArrIndex <= middle && rightArrIndex <= end) {
-			if(arr[leftArrIndex] < arr[rightArrIndex]) {
-				sortedArr.push(arr[leftArrIndex]);
-				leftArrIndex++;
-			} else {
-				sortedArr.push(arr[rightArrIndex]);
-				rightArrIndex++;
-			}
+				if(arr[leftArrIndex] < arr[rightArrIndex]) {
+					sortedArr.push(arr[leftArrIndex]);
+					leftArrIndex++;
+				} else {
+					sortedArr.push(arr[rightArrIndex]);
+					rightArrIndex++;
+				}
 			} else if(leftArrIndex <= middle) {
 				sortedArr.push(arr[leftArrIndex]);
 				leftArrIndex++;
@@ -51,7 +51,7 @@ class MergeSort{
 				sortedArr.push(arr[rightArrIndex]);
 				rightArrIndex++;
 			} else {
-			console.log("this shit shouldn't come")
+				console.log("this shit shouldn't come")
 			}
 		}
 

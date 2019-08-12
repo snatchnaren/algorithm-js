@@ -20,4 +20,4 @@ class BasicString {
 
 bs = new BasicString();
 console.log(bs.stringReverse("narendrana"));
-console.log(bs.stringReverseOneLine("sharmila devi i"));
+console.log(bs.stringReverseOneLine("robert downey jr"));

@@ -13,11 +13,11 @@ class BasicSort{
 		 */
 		for(let i = 0, arrLen = (tempArr.length - 1); i < arrLen; ++i) {
 			for(let j = 0; j < (arrLen - i); ++j) {
-			if(tempArr[j] > tempArr[(j+1)]) {
-				let temp = tempArr[j];
-				tempArr[j] = tempArr[(j+1)];
-				tempArr[(j+1)] = temp;
-			}
+				if(tempArr[j] > tempArr[(j+1)]) {
+					let temp = tempArr[j];
+					tempArr[j] = tempArr[(j+1)];
+					tempArr[(j+1)] = temp;
+				}
 			}
 		}
 		/*[-10,-1,0,0,1,1,2,3,4,5,5,6,7,8,8,8,9]*/
@@ -34,14 +34,14 @@ class BasicSort{
 		for(let i = 0, arrLen = tempArr.length; i < arrLen; ++i) {
 			minIndex = i;
 			for(let j = (i + 1); j < arrLen; ++j) {
-			if(tempArr[minIndex] > tempArr[j]) {
-				minIndex = j;
-			}
+				if(tempArr[minIndex] > tempArr[j]) {
+					minIndex = j;
+				}
 			}
 			if(i !== minIndex) {
-			let temp = tempArr[i];
-			tempArr[i] = tempArr[minIndex];
-			tempArr[minIndex] = temp;
+				let temp = tempArr[i];
+				tempArr[i] = tempArr[minIndex];
+				tempArr[minIndex] = temp;
 			}
 		}
 		/*[-10,-1,0,0,1,1,2,3,4,5,5,6,7,8,8,8,9]*/

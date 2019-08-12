@@ -124,4 +124,4 @@ class HeapSort {
 
 let arr = [12, 11, 13, 5, 6, 7],
     h = new HeapSort(arr);
-h.runSort("MIN_HEAPIFY");
+h.runSort("MAX_HEAPIFY");
