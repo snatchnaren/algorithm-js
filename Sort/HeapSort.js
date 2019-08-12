@@ -42,7 +42,13 @@ class HeapSort {
         console.log(`After sorting: ${this.arr}`);
     }
 
-    /* To get an ascending order */
+    /**
+     * To get an ascending order,
+     * 
+     * @param {Array} arr Heap array with all its properties
+     * @param {Number} heapLength Size of an array
+     * @param {Number} largestIndex root index value
+     */
     maxHeapify(arr, heapLength, largestIndex) {
         let leftChildIndex = this.getLeftChildIndex(largestIndex),
             rightChildIndex = this.getRightChildIndex(largestIndex),
@@ -75,7 +81,13 @@ class HeapSort {
         }
     }
 
-    /* To get descending order */
+    /**
+     * To get an descending order,
+     * 
+     * @param {Array} arr Heap array with all its properties
+     * @param {Number} heapLength Size of an array
+     * @param {Number} largestIndex root index value
+     */
     minHeapify(arr, heapLength, smallestIndex) {
         let leftChildIndex = this.getLeftChildIndex(smallestIndex),
             rightChildIndex = this.getRightChildIndex(smallestIndex),

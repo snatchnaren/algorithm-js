@@ -40,7 +40,7 @@ class QuickSortLastPivot {
 			}
 		}
 
-        /* Swap lowItr+1 and endIndex */
+        /* Swap lowItr+1 and endIndex(pivot) */
         lowItr++;
 		let temp = arr[lowItr];
 		arr[lowItr] = arr[endIndex];

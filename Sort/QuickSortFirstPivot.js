@@ -39,7 +39,7 @@ class QuickSorFirstPivot {
 			}
 		}
 
-        /* Swap highItr+1 and endIndex */
+        /* Swap highItr+1 and startIndex(pivot) */
         highItr--;
 		let temp = arr[highItr];
 		arr[highItr] = arr[startIndex];
