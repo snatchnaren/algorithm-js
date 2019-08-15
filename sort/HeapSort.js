@@ -13,11 +13,11 @@ class HeapSort {
         console.log(`Before sorting: ${this.arr}`);
 
         /** 
-         * Building jeap array which is a tree.
+         * Building heap array which is a tree.
          * Starts from middle as by considering 
-         * all elements after middle are childrens
+         * all elements after middle are childrens.
          */
-        for(let i = ((this.arrLength/2)-1); i >= 0; --i) {
+        for(let i = Math.floor((this.arrLength - 1)/2); i >= 0; --i) {
             option === "MAX_HEAPIFY" ? 
                 this.maxHeapify(this.arr, this.arrLength, i):
                 this.minHeapify(this.arr, this.arrLength, i);
@@ -39,7 +39,7 @@ class HeapSort {
                 this.minHeapify(this.arr, i, 0); 
         } 
 
-        console.log(`After sorting: ${this.arr}`);
+        console.log(`After sorting: ${this.arr.reverse()}`);
     }
 
     /**
@@ -136,4 +136,4 @@ class HeapSort {
 
 let arr = [12, 11, 13, 5, 6, 7],
     h = new HeapSort(arr);
-h.runSort("MAX_HEAPIFY");
+h.runSort("MIN_HEAPIFY");

@@ -28,7 +28,7 @@ class QuickSortLastPivot {
 		let lowItr = startIndex - 1;
 
 		/* Iterate till left itr keeps smaller than right itr */
-		for(let i = startIndex; i <= (endIndex - 1); ++i) {
+		for(let i = startIndex; i < endIndex; ++i) {
 
 			if(arr[i] <= pivotValue) {
                 lowItr++;

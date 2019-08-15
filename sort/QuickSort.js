@@ -26,11 +26,12 @@ class QuickSort {
 
 		let pivotIndex = Math.floor((startIndex + endIndex)/2);
 
-		/* Swap left and pivot */
+		/* Swap startIndex and pivotIndex */
 		let temp = arr[startIndex];
 		arr[startIndex] = arr[pivotIndex];
 		arr[pivotIndex] = temp;
 
+		/* After swap pivot value present in startIndex */
 		let pivotValue = arr[startIndex];
 		
 
@@ -40,11 +41,11 @@ class QuickSort {
 		/* Iterate till left itr keeps smaller than right itr */
 		while(lowItr <= highItr) {
 
-			/* finds lowest element in left sub-array */
+			/* finds highest element in left sub-array */
 			while(arr[lowItr] <= pivotValue && lowItr <= highItr) {
 				lowItr++;
 			}
-			/* finds highest element in right sub-array */
+			/* finds lowest element in right sub-array */
 			while(arr[highItr] > pivotValue) {
 				highItr--;
 			}

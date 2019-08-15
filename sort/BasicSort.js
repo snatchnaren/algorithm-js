@@ -61,7 +61,7 @@ class BasicSort{
 			
 			/*Not taking 0th element as it will throw index bound exception*/
 			for(; j > 0 && iValue < tempArr[(j - 1)]; --j) {
-				tempArr[j] = tempArr[(j - 1)]
+				tempArr[j] = tempArr[(j - 1)]	
 			}
 			
 			/*Swapping iValue with last jIndex*/

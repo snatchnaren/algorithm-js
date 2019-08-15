@@ -99,7 +99,6 @@ class NarenTraverse {
                 return minimumDistance;
             }
 
-            /* Moving to next level */
             /**
              * Push its children back to a queue, 
              * removes visited elements and concat 
