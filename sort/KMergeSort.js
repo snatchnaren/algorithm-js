@@ -7,9 +7,14 @@ class KMergeSort {
         console.log(`Before sort: ${this.arr}`)
         let minHeapArr = [], sortedArr = [];
         for(let i = 0, len = this.arr.length; i < len; ++i) {
-            minHeapArr.push({value: this.arr[i][0], elementIndex: 0, arrayIndex: i});
+            minHeapArr.push({
+                value: this.arr[i][0], 
+                elementIndex: 0, 
+                arrayIndex: i
+            });
         }
-        this.minHeapify(minHeapArr, minHeapArr.length, 0);
+
+        this.heapify(minHeapArr)
         while(true) {
             let firstElement = minHeapArr.shift();
             
@@ -19,7 +24,7 @@ class KMergeSort {
                 firstElement.elementIndex < 
                 this.arr[firstElement.arrayIndex].length
             ) {
-                minHeapArr.push({
+                minHeapArr.unshift({
                     value: this.arr[firstElement.arrayIndex][firstElement.elementIndex], 
                     elementIndex: firstElement.elementIndex, 
                     arrayIndex: firstElement.arrayIndex
@@ -28,9 +33,16 @@ class KMergeSort {
             if(minHeapArr.length === 0) {
                 break;
             }
-            this.minHeapify(minHeapArr, minHeapArr.length, 0);
+            this.heapify(minHeapArr)
+            
         }
         console.log(`Sorted array: ${sortedArr}`)
+    }
+
+    heapify(minHeapArr) {
+        for(let i = Math.floor((minHeapArr.length-1)/2); i >= 0; --i) {
+            this.minHeapify(minHeapArr, minHeapArr.length, i);
+        }
     }
 
     minHeapify(arr, heapLength, smallestIndex) {
