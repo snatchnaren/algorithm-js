@@ -5,7 +5,7 @@
  * @param {Number} inputNumber 
  */
 function getSquareSum(input) {
-    let squareSum = 0;
+    let squareSum = 0, remainderNumber= 0;
     while(input !== 0) {
         remainderNumber = (input % 10)
         squareSum += (remainderNumber * remainderNumber);

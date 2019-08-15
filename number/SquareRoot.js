@@ -11,7 +11,7 @@ function findSquareRoot (inputNumber) {
         ++i;
         result = i * i;
     }
-    return --i;
+    return i;
 }
 
 console.log(findSquareRoot(16));
